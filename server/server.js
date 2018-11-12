@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 
  //创建一个主机名
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
  //创建一个服务端号
 const port = 3000;
 //连接数据库 本地需要启动
