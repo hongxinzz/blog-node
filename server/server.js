@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
  //创建一个主机名
 const hostname = '0.0.0.0';
  //创建一个服务端号
-const port = 3000;
+const port = 80;
 //连接数据库 本地需要启动
 mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
  //创建一个请求头 req为http请求res为http响应x
