@@ -259,7 +259,7 @@ const httpApi = function (req, res) {
     console.log(page, start)
     postArticle.count({}, function (err, comment) {
       count = comment
-    })
+    });
     postArticle.find({}).sort({'_id':-1}).skip(start).limit(5).exec(function (err, datas) {
       let commont = {data: datas, count: count}
       console.log(commont)
