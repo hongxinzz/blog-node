@@ -5,7 +5,6 @@
 ##cover:https://raw.githubusercontent.com/hongxinzz/blog/master/assets/img/reactdom.png-cover
 ##tags:React-tags
 ---
-
 ##content
 现在可以把我们所学到的内容应用于实战当中。
 这里给大家提供一个实战的案例：一个评论功能。效果如下：
@@ -210,6 +209,4 @@ handelDelete(index){
 其实就是一个简单的数组去除再重新更新一下我们state中message的状态就好了。
 
 这里的话就完成了我们以上的功能。
-
-
 -content
