@@ -23,16 +23,16 @@ PostArticle.remove({}, function (err, comment) {
 
 function getNewArticle () {
   filelist.forEach(fileName => {
-    if(fileName.substring(fileName.indexOf('.'),fileName.length) != '.md') return
-    let fileContent = new String(fs.readFileSync(path.join(dir, fileName)))
-    let article = fileContent.replace(/[\r\n]/g, '')
-    let title = article.substring(article.search(/##title/), article.search(/-title/)).replace(/##title:/, '')
-    console.log(article)
-    let tags = article.substring(article.search(/##tags/), article.search(/-tags/)).replace(/##tags:/, '')
-    let cover = article.substring(article.search(/##cover/), article.search(/-cover/)).replace(/##cover:/, '')
-    let introduction = article.substring(article.search(/##introduction/), article.search(/-introduction/)).replace(/##introduction:/, '')
-    let content =  marked(article.substring(article.search(/##content/), article.search(/-content/)).replace(/##content:/, ''))
-    let time = article.substring(article.search(/##time/), article.search(/-time/)).replace(/##time:/, '')
+      if(fileName.substring(fileName.indexOf('.'),fileName.length) != '.md') return
+      let fileContent = new String(fs.readFileSync(path.join(dir, fileName)))
+      let article = fileContent.replace(/[\r\n]/g, '')
+      let title = article.substring(article.search(/##title/), article.search(/-title/)).replace(/##title:/, '')
+      console.log(article)
+      let tags = article.substring(article.search(/##tags/), article.search(/-tags/)).replace(/##tags:/, '')
+      let cover = article.substring(article.search(/##cover/), article.search(/-cover/)).replace(/##cover:/, '')
+      let introduction = article.substring(article.search(/##introduction/), article.search(/-introduction/)).replace(/##introduction:/, '')
+      let content =  marked(fileContent.substring(fileContent.search(/\n##content/), fileContent.search(/-content/)).replace(/##content:/, ''))
+      let time = article.substring(article.search(/##time/), article.search(/-time/)).replace(/##time:/, '')
 
     let person = new PostArticle({
       title: title,
