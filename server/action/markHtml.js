@@ -25,15 +25,12 @@ function getNewArticle () {
   filelist.forEach(fileName => {
       if(fileName.substring(fileName.indexOf('.'),fileName.length) != '.md') return
       let fileContent = new String(fs.readFileSync(path.join(dir, fileName)))
-      let art = fileContent.replace(/[\r\n]/g, '')
-      let article = new String(art)
-      let title = article.substring(article.search(/##title/), article.search(/-title/)).replace(/##title:/, '')
-      console.log(article)
-      let tags = article.substring(article.search(/##tags/), article.search(/-tags/)).replace(/##tags:/, '')
-      let cover = article.substring(article.search(/##cover/), article.search(/-cover/)).replace(/##cover:/, '')
-      let introduction = article.substring(article.search(/##introduction/), article.search(/-introduction/)).replace(/##introduction:/, '')
-      let content =  marked(article.substring(article.search(/##content/), article.search(/-content/)).replace(/##content:/, ''))
-      let time = article.substring(article.search(/##time/), article.search(/-time/)).replace(/##time:/, '')
+      let title = fileContent.substring(fileContent.search(/\n##title/), fileContent.search(/-title/)).replace(/##title:/, '')
+      let tags = fileContent.substring(fileContent.search(/\n##tags/), fileContent.search(/-tags/)).replace(/##tags:/, '')
+      let cover = fileContent.substring(fileContent.search(/\n##cover/), fileContent.search(/-cover/)).replace(/##cover:/, '')
+      let introduction = fileContent.substring(fileContent.search(/\n##introduction/), fileContent.search(/-introduction/)).replace(/##introduction:/, '')
+      let content = marked(fileContent.substring(fileContent.search(/\n##content/), fileContent.search(/-content/)).replace(/##content:/, ''))
+      let time = fileContent.substring(fileContent.search(/\n##time/), fileContent.search(/-time/)).replace(/##time:/, '')
 
     let person = new PostArticle({
       title: title,
