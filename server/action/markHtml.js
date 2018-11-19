@@ -25,7 +25,8 @@ function getNewArticle () {
   filelist.forEach(fileName => {
       if(fileName.substring(fileName.indexOf('.'),fileName.length) != '.md') return
       let fileContent = new String(fs.readFileSync(path.join(dir, fileName)))
-      let article = fileContent.replace(/[\r\n]/g, '')
+      let art = fileContent.replace(/[\r\n]/g, '')
+      let article = new String(art)
       let title = article.substring(article.search(/##title/), article.search(/-title/)).replace(/##title:/, '')
       console.log(article)
       let tags = article.substring(article.search(/##tags/), article.search(/-tags/)).replace(/##tags:/, '')
