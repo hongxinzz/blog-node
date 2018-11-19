@@ -5,7 +5,7 @@
 ##cover:http://static.runoob.com/images/mix/code-wallpaper-18.png-cover
 ##tags:javaScript-tags
 ---
-##content
+##content:
 上个文章我们有说到，Arguments在函数中的作用
 也说明了Arguments是一个对象，且是一个类数组有lenght属性，
 缺点不要多用，影响代码的可读性，试想你一个argument[0]

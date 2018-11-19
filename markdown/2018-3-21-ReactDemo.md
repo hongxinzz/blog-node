@@ -5,7 +5,7 @@
 ##cover:https://raw.githubusercontent.com/hongxinzz/blog/master/assets/img/reactdom.png-cover
 ##tags:React-tags
 ---
-##content
+##content:
 现在可以把我们所学到的内容应用于实战当中。
 这里给大家提供一个实战的案例：一个评论功能。效果如下：
 
