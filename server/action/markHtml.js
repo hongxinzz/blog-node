@@ -31,7 +31,7 @@ function getNewArticle () {
     let tags = article.substring(article.search(/##tags/), article.search(/-tags/)).replace(/##tags:/, '')
     let cover = article.substring(article.search(/##cover/), article.search(/-cover/)).replace(/##cover:/, '')
     let introduction = article.substring(article.search(/##introduction/), article.search(/-introduction/)).replace(/##introduction:/, '')
-    let content =  marked(fileContent.substring(article.search(/##content/), article.search(/-content/)).replace(/##content:/, ''))
+    let content =  marked(article.substring(article.search(/##content/), article.search(/-content/)).replace(/##content:/, ''))
     let time = article.substring(article.search(/##time/), article.search(/-time/)).replace(/##time:/, '')
 
     let person = new PostArticle({
