@@ -7,9 +7,9 @@ const app = new Koa();
 
 const home   = serve(path.join(__dirname)+'/dist/');
 // 创建一个主机名
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 // 创建一个服务端号
-const port = 8080;
+const port = 80;
 // 连接数据库 本地需要启动
 mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
 
