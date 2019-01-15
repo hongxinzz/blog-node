@@ -1,8 +1,8 @@
 const Koa = require('koa');
-const Router = require('koa-router');
 const path = require('path');
 const mongoose = require('mongoose');
 const serve = require('koa-static');
+const bodyParser = require('koa-bodyparser');
 const app = new Koa();
 
 const home   = serve(path.join(__dirname)+'/dist/');
@@ -15,10 +15,11 @@ mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
 
 //使用bodyParser获取body(post方法)
 app.use(home)
+    .use(bodyParser())
 //引入数据库模型 并通过路由返回数据
-  .use(require('./routers/article-router.js').routes())
-  .use(require('./routers/message-router.js').routes())
-  .use(require('./routers/user-router.js').routes());
+    .use(require('./routers/article-router.js').routes())
+    .use(require('./routers/message-router.js').routes())
+    .use(require('./routers/user-router.js').routes());
 
 
 app.listen(port, hostname, () => {
