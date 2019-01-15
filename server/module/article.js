@@ -73,6 +73,7 @@ module.exports.getArticleNew = pageLimit =>{
  * @param data
  */
 module.exports.postArticle = data =>{
+  console.log(data)
   let person = new _Article({
     title: data.title,
     tags: data.tags,
