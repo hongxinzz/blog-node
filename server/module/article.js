@@ -73,7 +73,6 @@ module.exports.getArticleNew = pageLimit =>{
  * @param data
  */
 module.exports.postArticle = data =>{
-  console.log(data)
   let person = new _Article({
     title: data.title,
     tags: data.tags,
@@ -81,6 +80,15 @@ module.exports.postArticle = data =>{
     introduction: data.introduction,
     content: data.content,
     time: moment().format("YYYY-MM-DD HH:mm:ss")
-  })
+  });
   return  person.save();
-}
+};
+
+/**
+ * 删除文章
+ * @param id
+ * @returns {RegExpExecArray}
+ */
+module.exports.deleteArticle = id =>{
+  return _Article.remove({_id:id}).exec()
+};
