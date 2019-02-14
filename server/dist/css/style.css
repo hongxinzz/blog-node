@@ -203,30 +203,6 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
   overflow: hidden;
   clear: both;
 }
-.blog-admin-login[data-v-306ac12e] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#aa4b6b, #6b6b83, #3b8d99);
-}
-.blog-admin-login .from-wrap[data-v-306ac12e] {
-    width: 380px;
-    padding: 15px;
-    border-radius: 4px;
-    background: #fff;
-}
-.blog-admin-login .from-wrap h3[data-v-306ac12e] {
-      margin-bottom: 10px;
-      text-align: center;
-      font-size: 18px;
-      color: #ed4040;
-}
-.blog-admin-login .from-wrap .ivu-form-item[data-v-306ac12e]:last-child {
-      text-align: center;
-      margin-bottom: 0;
-}
 .header {
   position: fixed;
   top: 0;
@@ -286,6 +262,30 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 }
 .header-fix .r-nav li a {
     color: #666666;
+}
+.blog-admin-login[data-v-306ac12e] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#aa4b6b, #6b6b83, #3b8d99);
+}
+.blog-admin-login .from-wrap[data-v-306ac12e] {
+    width: 380px;
+    padding: 15px;
+    border-radius: 4px;
+    background: #fff;
+}
+.blog-admin-login .from-wrap h3[data-v-306ac12e] {
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 18px;
+      color: #ed4040;
+}
+.blog-admin-login .from-wrap .ivu-form-item[data-v-306ac12e]:last-child {
+      text-align: center;
+      margin-bottom: 0;
 }
 .article-list {
   padding-top: 10px;
@@ -1670,4 +1670,16 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
       font-size: 14px;
       line-height: 1.5;
       background-color: #fff;
+}
+.article-edit-wrap .editModal .tags input[data-v-01f38f2f] {
+    margin-right: 20px;
+}
+.article-edit-wrap .editModal .tags button[data-v-01f38f2f] {
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px 11px;
+    cursor: pointer;
 }
