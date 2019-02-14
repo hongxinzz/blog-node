@@ -96,6 +96,7 @@ module.exports.deleteArticle = id =>{
 
 module.exports.editArticle = data =>{
     let articleData = {
+        _id:data._id,
         title: data.title,
         tags: data.tags,
         cover: data.cover,
