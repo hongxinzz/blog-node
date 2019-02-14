@@ -95,6 +95,12 @@ module.exports.deleteArticle = id =>{
 };
 
 module.exports.editArticle = data =>{
-    let articleData = {...data,lastChangeTime: moment().format("YYYY-MM-DD HH:mm:ss")};
+    let articleData = {
+        title: data.title,
+        tags: data.tags,
+        cover: data.cover,
+        introduction: data.introduction,
+        content: data.content,
+        lastChangeTime: moment().format("YYYY-MM-DD HH:mm:ss")};
     return _Article.update({_id:articleData._id},articleData)
 };
