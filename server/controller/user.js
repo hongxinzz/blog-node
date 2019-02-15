@@ -17,7 +17,7 @@ module.exports.userLogin = async ctx =>{
             user: res.userName,
         }, serect, {expiresIn: '1h'});
       if(res){
-          res = {...res,token:token}
+          Object.assign(res, res, token)
       }
       checkDataType(ctx,res)
     })
