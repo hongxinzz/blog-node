@@ -26,7 +26,7 @@ router.get('/api/get_blogs_new', article.getArticleNew)
 router.post('/api/post_article',article.postArticle)
 
 //删除文章
-router.post('/api/delete_article',article.deleteArticle)
+router.post('/api/delete_article', article.deleteArticle)
 
 //修改文章
 router.post('/api/edit_article',article.editArticle)

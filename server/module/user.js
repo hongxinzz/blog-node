@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-
+const mongoose = require('mongoose');
 
 // 登录模板
 const user = new mongoose.Schema({
@@ -26,7 +25,7 @@ module.exports.userLogin = data=>{
  */
 module.exports.queryRegister =  data =>{
   return  _User.findOne({userName: data.userName})
-}
+};
 
 /**
  * 注册用户
@@ -37,6 +36,6 @@ module.exports.userRegister =  data =>{
   let person = new _User({
       userName: data.userName,
       password: data.password
-  })
+  });
   return  person.save();
-}
+};
