@@ -87,181 +87,44 @@ Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
 .hljs-emphasis {
   font-style: italic;
 }
-/*
 
-Atom One Dark With support for ReasonML by Gidi Morris, based off work by Daniel Gamage
-
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-
-*/
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  line-height: 1.3em;
-  color: #abb2bf;
-  background: #282c34;
-  border-radius: 5px;
+.app, html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-.hljs-keyword, .hljs-operator {
-  color: #F92672;
+.app-view {
+    width: 100%;
+    /*height: 100%;*/
+    top: 0;
+    left: 0;
+    position: absolute;
 }
-.hljs-pattern-match {
-  color: #F92672;
+.left-enter {
+    transform: translateX(100%);
 }
-.hljs-pattern-match .hljs-constructor {
-  color: #61aeee;
+.left-enter-to {
+    transform: translateX(0);
 }
-.hljs-function {
-  color: #61aeee;
+.left-enter-active {
+    transition: 0.5s;
 }
-.hljs-function .hljs-params {
-  color: #A6E22E;
+.left-leave {
+    transform: translateX(0);
 }
-.hljs-function .hljs-params .hljs-typing {
-  color: #FD971F;
+.left-leave-to {
+    transform: translateX(-100%);
 }
-.hljs-module-access .hljs-module {
-  color: #7e57c2;
-}
-.hljs-constructor {
-  color: #e2b93d;
-}
-.hljs-constructor .hljs-string {
-  color: #9CCC65;
-}
-.hljs-comment, .hljs-quote {
-  color: #b18eb1;
-  font-style: italic;
-}
-.hljs-doctag, .hljs-formula {
-  color: #c678dd;
-}
-.hljs-section, .hljs-name, .hljs-selector-tag, .hljs-deletion, .hljs-subst {
-  color: #e06c75;
-}
-.hljs-literal {
-  color: #56b6c2;
-}
-.hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta-string {
-  color: #98c379;
-}
-.hljs-built_in, .hljs-class .hljs-title {
-  color: #e6c07b;
-}
-.hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-number {
-  color: #d19a66;
-}
-.hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-title {
-  color: #61aeee;
-}
-.hljs-emphasis {
-  font-style: italic;
-}
-.hljs-strong {
-  font-weight: bold;
-}
-.hljs-link {
-  text-decoration: underline;
+.left-leave-active {
+    transition: 0.5s;
 }
 
-.app,html,body{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-.app-view{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position:absolute;
-}
-.left-enter{
-  transform: translateX(100%);
-}
-.left-enter-to{
-  transform: translateX(0);
-}
-.left-enter-active{
-  transition: 0.5s;
-}
-.left-leave{
-  transform: translateX(0);
-}
-.left-leave-to{
-  transform: translateX(-100%);
-}
-.left-leave-active{
-  transition: 0.5s;
-}
-
-.blog-content[data-v-12ed8b2e]{
-  width: 750px;
-  margin: 40px auto 60px;
-  overflow: hidden;
-  clear: both;
-}
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /*height: 26px;*/
-  padding: 16px 0;
-  background-color: transparent;
-  transition: all 1s;
-  z-index: 1000;
-}
-.header .r-nav {
-    float: right;
-    margin-right: 2%;
-}
-.header .r-nav li {
-      float: left;
-      height: 26px;
-      line-height: 26px;
-      margin-right: 18px;
-      list-style: none;
-}
-.header .r-nav li a {
-        display: inline-block;
-        font-size: 14px;
-        letter-spacing: 1px;
-        color: #fff;
-        padding: 0 12px;
-        opacity: .7;
-}
-.header .r-nav li a i {
-          margin-right: 5px;
-}
-.header .r-nav li a:hover {
-          opacity: 1;
-}
-.header .claerfix {
+.blog-content[data-v-12ed8b2e] {
+    width: 750px;
+    margin: 40px auto 60px;
+    overflow: hidden;
     clear: both;
-}
-.header .gotop {
-    position: fixed;
-    right: 30px;
-    bottom: 130px;
-    width: 56px;
-    height: 24px;
-    background: #222;
-    color: #fff;
-    line-height: 24px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 14px;
-    z-index: 10000;
-}
-.header-fix {
-  background: #fff;
-  border: 1px solid #e7eaf1;
-}
-.header-fix .r-nav li a {
-    color: #666666;
 }
 .blog-admin-login[data-v-766e62cf] {
   display: flex;
@@ -322,6 +185,66 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 .blog-admin-login .from-wrap .ivu-form-item[data-v-766e62cf]:last-child {
       text-align: center;
       margin-bottom: 0;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*height: 26px;*/
+  padding: 16px 0;
+  background-color: transparent;
+  transition: all 1s;
+  z-index: 1000;
+}
+.header .r-nav {
+    float: right;
+    margin-right: 2%;
+}
+.header .r-nav li {
+      float: left;
+      height: 26px;
+      line-height: 26px;
+      margin-right: 18px;
+      list-style: none;
+}
+.header .r-nav li a {
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #fff;
+        padding: 0 12px;
+        opacity: .7;
+}
+.header .r-nav li a i {
+          margin-right: 5px;
+}
+.header .r-nav li a:hover {
+          opacity: 1;
+}
+.header .claerfix {
+    clear: both;
+}
+.header .gotop {
+    position: fixed;
+    right: 30px;
+    bottom: 130px;
+    width: 56px;
+    height: 24px;
+    background: #222;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 10000;
+}
+.header-fix {
+  background: #fff;
+  border: 1px solid #e7eaf1;
+}
+.header-fix .r-nav li a {
+    color: #666666;
 }
 .article-list {
   padding-top: 10px;
@@ -698,25 +621,36 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
           margin-right: 4px;
 }
 .markdown-wrap {
-  position: relative;
-  width: 100%;
-  background-color: #fff;
-  overflow: hidden;
-  padding: 40px 0 80px;
+  box-sizing: border-box;
+  padding-top: 90px;
+  background-color: #fcfcfc;
 }
 .markdown-wrap .markdown {
-    width: 860px;
-    box-sizing: border-box;
-    padding: 0 0 32px;
+    position: relative;
+    max-width: 850px;
     margin: 0 auto;
+    padding: 20px 60px 40px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
 }
 .markdown-wrap .markdown * {
       font-size: 14px;
 }
-.markdown-wrap .markdown p {
-      font-size: 14px;
-      line-height: 1.8;
-      text-align: justify;
+.markdown-wrap .markdown pre {
+      position: relative;
+      line-height: 1.75;
+}
+.markdown-wrap .markdown pre code {
+        padding: 18px 15px 12px;
+        overflow-x: auto;
+        overflow-scrolling: touch;
+        margin: 0;
+        word-break: normal;
+        display: block;
+        color: #333;
+        background: #f8f8f8;
 }
 .markdown-wrap .markdown .hljs {
       padding: 1em;
@@ -732,12 +666,20 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
       line-height: 1.5;
 }
 .markdown-wrap .markdown h1 ~ h6 {
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
+      color: #333;
+      line-height: 1.5;
+      margin-top: 35px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+}
+.markdown-wrap .markdown h1 {
+      font-size: 30px;
+      margin-bottom: 5px;
 }
 .markdown-wrap .markdown h2 {
+      padding-bottom: 12px;
       font-size: 24px;
-      line-height: 32px;
+      border-bottom: 1px solid #ececec;
 }
 .markdown-wrap .markdown h3 {
       font-size: 20px;
@@ -753,30 +695,40 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
         font-size: 16px;
 }
 .markdown-wrap .markdown code {
+      background-color: #fff5f5;
+      color: #ff502c;
+      font-size: .87em;
+      padding: .065em .4em;
+      word-break: break-word;
       border-radius: 2px;
-      padding: 2px 4px;
+      overflow-x: auto;
+}
+.markdown-wrap .markdown p {
+      line-height: inherit;
+      margin-top: 22px;
+      margin-bottom: 22px;
 }
 .markdown-wrap .markdown p code {
-      color: #c7254e;
-      background-color: #f9f2f4;
+        color: #c7254e;
+        background-color: #f9f2f4;
 }
 .markdown-wrap .markdown blockquote {
       display: block;
-      padding: 16px;
-      margin: 0 0 24px;
-      border-left: 8px solid #dddfe4;
-      background: #eef0f4;
-      overflow: auto;
+      color: #666;
+      padding: 1px 23px;
+      margin: 22px 0;
+      border-left: 4px solid #cbcbcb;
+      background-color: #f8f8f8;
 }
 .markdown-wrap .markdown blockquote p {
-        font-size: 14px;
-        line-height: 22px;
-        color: #999;
-        font-weight: 400;
-        margin-bottom: 0;
+        margin: 10px 0;
 }
 .markdown-wrap .markdown blockquote::before, .markdown-wrap .markdown blockquote::after {
         content: '';
+}
+.markdown-wrap .markdown a {
+      color: #0269c8;
+      border-bottom: 1px solid #d1e9ff;
 }
 @keyframes fadeInUp {
 0% {
@@ -1173,6 +1125,278 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
     transform: none;
 }
 }
+.project-wrap[data-v-620561a4] {
+  width: 100%;
+  min-height: 100vh;
+  /*margin-top: 58px;*/
+  background: #000;
+}
+.project-wrap .project[data-v-620561a4] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: 70px auto;
+}
+.project-wrap .project .project-item[data-v-620561a4] {
+      position: relative;
+      width: 465px;
+      height: 314px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+      cursor: pointer;
+}
+.project-wrap .project .project-item img[data-v-620561a4] {
+        display: inline-block;
+        width: 100%;
+        height: 289px;
+        transition: all .3s linear;
+}
+.project-wrap .project .project-item .project-name[data-v-620561a4] {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-top: 10px;
+        font-size: 18px;
+        color: #999;
+}
+.project-wrap .project .project-item .project-des[data-v-620561a4] {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 289px;
+        width: 100%;
+        line-height: 1.6;
+        font-size: 20px;
+        color: #fff;
+        padding: 20px;
+        transition: all .1s linear;
+        background: #666;
+        opacity: 0;
+}
+.project-wrap .project .project-item:hover img[data-v-620561a4] {
+        transform: rotateZ(7deg);
+}
+.project-wrap .project .project-item:hover .project-des[data-v-620561a4] {
+        opacity: .9;
+}
+.project-wrap .project .project-item:hover .project-name[data-v-620561a4] {
+        color: #fff;
+}
+.edit-article-wrap[data-v-d14a258a] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999999;
+}
+.edit-article-wrap .edit-modal[data-v-d14a258a] {
+    background: #fff;
+    border-radius: 4px;
+}
+.edit-article-wrap .edit-modal .edit-header[data-v-d14a258a] {
+      padding: 16px 24px;
+      border-radius: 4px 4px 0 0;
+      background: #fff;
+      color: rgba(0, 0, 0, 0.65);
+      border-bottom: 1px solid #e8e8e8;
+}
+.edit-article-wrap .edit-modal .edit-header .title[data-v-d14a258a] {
+        margin: 0;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+}
+.edit-article-wrap .edit-modal .edit-content[data-v-d14a258a] {
+      padding: 24px;
+      font-size: 14px;
+      line-height: 1.5;
+      word-wrap: break-word;
+}
+.edit-article-wrap .edit-modal .edit-footer[data-v-d14a258a] {
+      border-top: 1px solid #e8e8e8;
+      padding: 10px 16px;
+      text-align: right;
+      border-radius: 0 0 4px 4px;
+}
+.edit-article-wrap .edit-modal .edit-footer button[data-v-d14a258a] {
+        line-height: 1.499;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid #d9d9d9;
+        white-space: nowrap;
+        padding: 0 15px;
+        font-size: 14px;
+        border-radius: 4px;
+        height: 32px;
+}
+.edit-article-wrap .edit-modal .edit-footer button.save[data-v-d14a258a] {
+        margin-left: 8px;
+        color: #fff;
+        background-color: #1890ff;
+        border-color: #1890ff;
+}
+.project-wrap[data-v-1c0bc407] {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+.project-wrap .button-wrap[data-v-1c0bc407] {
+    padding-bottom: 15px;
+    text-align: right;
+}
+.project-wrap button[data-v-1c0bc407] {
+    line-height: 1.499;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    white-space: nowrap;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 32px;
+    position: relative;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    color: rgba(0, 0, 0, 0.65);
+    outline: none;
+    background-color: #fff;
+}
+.project-wrap button[data-v-1c0bc407]:hover {
+      color: #40a9ff;
+      border-color: #40a9ff;
+}
+.project-wrap .no-data[data-v-1c0bc407] {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f0f0f0;
+}
+.project-wrap .no-data p[data-v-1c0bc407] {
+      margin-bottom: 15px;
+}
+.project-wrap .project-head[data-v-1c0bc407] {
+    background: #fafafa;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+}
+.project-wrap .project-head[data-v-1c0bc407], .project-wrap li[data-v-1c0bc407] {
+    display: flex;
+}
+.project-wrap .project-head p[data-v-1c0bc407], .project-wrap li p[data-v-1c0bc407] {
+      flex: 1;
+      max-width: 267px;
+      padding: 16px;
+      text-align: center;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.65);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+}
+.project-wrap .project-head p span[data-v-1c0bc407], .project-wrap li p span[data-v-1c0bc407] {
+        padding: 10px;
+        margin: 0 5px;
+        color: #59aaff;
+        background: #ebf5ff;
+        border-radius: 6px;
+}
+.project-wrap .project-head p button[data-v-1c0bc407], .project-wrap li p button[data-v-1c0bc407] {
+        line-height: 1.499;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid #d9d9d9;
+        white-space: nowrap;
+        padding: 0 15px;
+        font-size: 14px;
+        border-radius: 4px;
+        height: 32px;
+        color: rgba(0, 0, 0, 0.65);
+}
+.project-wrap .project-head p button.edit[data-v-1c0bc407], .project-wrap li p button.edit[data-v-1c0bc407] {
+        border: 1px solid #b7eb8f;
+        background-color: #f6ffed;
+}
+.project-wrap .project-head p button.delete[data-v-1c0bc407], .project-wrap li p button.delete[data-v-1c0bc407] {
+        border: 1px solid #91d5ff;
+        background-color: #e6f7ff;
+}
+.project-wrap .editModal div[data-v-1c0bc407] {
+    display: flex;
+    margin: 4px 0;
+}
+.project-wrap .editModal div label[data-v-1c0bc407] {
+      line-height: 34px;
+      margin-right: 15px;
+}
+.project-wrap .editModal div input[data-v-1c0bc407] {
+      flex: 1;
+      display: inline-block;
+      width: 100%;
+      height: 32px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.65);
+      background-color: #fff;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 4px 11px;
+}
+.project-wrap .editModal div textarea[data-v-1c0bc407] {
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 4px 11px;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      height: 100px;
+      flex: 1;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: #fff;
+}
+.project-wrap .editModal div span[data-v-1c0bc407] {
+      margin-right: 8px;
+      padding: 4px 11px;
+      border: 1px solid #d9d9d9;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: #fff;
+}
+.project-wrap .editModal .tags input[data-v-1c0bc407] {
+    margin-right: 20px;
+}
+.project-wrap .editModal .tags button[data-v-1c0bc407] {
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px 11px;
+    cursor: pointer;
+}
 .admin-slider[data-v-d421c022] {
   width: 260px;
   height: 100vh;
@@ -1350,69 +1574,6 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 .wrap .overview-left .card-wrap .message-card[data-v-c9647be6] {
         margin-left: 30px;
 }
-.edit-article-wrap[data-v-d14a258a] {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999999;
-}
-.edit-article-wrap .edit-modal[data-v-d14a258a] {
-    background: #fff;
-    border-radius: 4px;
-}
-.edit-article-wrap .edit-modal .edit-header[data-v-d14a258a] {
-      padding: 16px 24px;
-      border-radius: 4px 4px 0 0;
-      background: #fff;
-      color: rgba(0, 0, 0, 0.65);
-      border-bottom: 1px solid #e8e8e8;
-}
-.edit-article-wrap .edit-modal .edit-header .title[data-v-d14a258a] {
-        margin: 0;
-        font-size: 16px;
-        line-height: 22px;
-        font-weight: 500;
-        color: rgba(0, 0, 0, 0.85);
-}
-.edit-article-wrap .edit-modal .edit-content[data-v-d14a258a] {
-      padding: 24px;
-      font-size: 14px;
-      line-height: 1.5;
-      word-wrap: break-word;
-}
-.edit-article-wrap .edit-modal .edit-footer[data-v-d14a258a] {
-      border-top: 1px solid #e8e8e8;
-      padding: 10px 16px;
-      text-align: right;
-      border-radius: 0 0 4px 4px;
-}
-.edit-article-wrap .edit-modal .edit-footer button[data-v-d14a258a] {
-        line-height: 1.499;
-        display: inline-block;
-        font-weight: 400;
-        text-align: center;
-        touch-action: manipulation;
-        cursor: pointer;
-        background-image: none;
-        border: 1px solid #d9d9d9;
-        white-space: nowrap;
-        padding: 0 15px;
-        font-size: 14px;
-        border-radius: 4px;
-        height: 32px;
-}
-.edit-article-wrap .edit-modal .edit-footer button.save[data-v-d14a258a] {
-        margin-left: 8px;
-        color: #fff;
-        background-color: #1890ff;
-        border-color: #1890ff;
-}
 .article-edit-wrap[data-v-01f38f2f] {
   height: 100%;
   overflow: hidden;
@@ -1428,10 +1589,14 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 }
 .article-edit-wrap .article-head p[data-v-01f38f2f], .article-edit-wrap li p[data-v-01f38f2f] {
       flex: 1;
+      max-width: 267px;
       padding: 16px;
       text-align: center;
       font-size: 14px;
       color: rgba(0, 0, 0, 0.65);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 }
 .article-edit-wrap .article-head p span[data-v-01f38f2f], .article-edit-wrap li p span[data-v-01f38f2f] {
         padding: 10px;
