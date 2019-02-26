@@ -23,7 +23,8 @@ app.use(home)
 //引入数据库模型 并通过路由返回数据
     .use(require('./routers/article-router.js').routes())
     .use(require('./routers/message-router.js').routes())
-    .use(require('./routers/user-router.js').routes());
+    .use(require('./routers/user-router.js').routes())
+    .use(require('./routers/router-project.js').routes());
 
 
 app.listen(port, hostname, () => {
